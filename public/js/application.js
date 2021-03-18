@@ -94,7 +94,6 @@ swipe.on("swiperight", (ev) => {
 
 const sellForm = document.getElementById('sell')
 const sellDiv = document.getElementById('sellDiv')
-//  console.log(sellForm, sellDiv);
 
 sellForm.addEventListener('submit', async (e)=>{
   e.preventDefault();
