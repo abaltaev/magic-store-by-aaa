@@ -1,5 +1,5 @@
 const router = require('express').Router()
 
-router.get('/',(req,res)=>res.send('BASKET PAGE'))
+router.get('/',(req,res)=>res.render('basket'))
 
 module.exports = router

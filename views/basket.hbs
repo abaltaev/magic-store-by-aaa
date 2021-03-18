@@ -1,0 +1,20 @@
+<ul id="container">
+
+  {{!-- {{#each card}} --}}
+  <li id="card">
+    <span>
+      <img src="https://media.magic.wizards.com/image_legacy_migration/images/magic/tcg/products/dgm/tiwoirwiixix/cgcqubotzx_RU.jpg" alt="cardImg">
+    </span>
+    <span>
+      <h2>{{card.name}}name</h2>
+      <h4>{{card.price}}$111</h4>
+      <h4>{{card.rare}}Legendary</h4>
+      <h4>{{card.city}}Moscow</h4>
+      <h4>{{card.condition}}3/5</h4>
+      <h4>{{card.sellerID}}John</h4>
+    </span>
+    <a href="/index/{{card.id}}">X</a>
+  </li>
+  {{!-- {{/each}} --}}
+
+</ul>
