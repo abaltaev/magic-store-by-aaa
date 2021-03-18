@@ -35,6 +35,10 @@ main > .container {
 
 }
 
+#profile-button {
+  margin: 7px;
+}
+
 .navbar-brand {
   margin-left: 3%;
 }
@@ -42,6 +46,11 @@ main > .container {
 .reg-bottom {
   text-align: center;
   margin-top: 3%;
+}
+
+.card-image {
+  height: 380px;
+  width: 270px;
 }
 
 /* #main-page {
