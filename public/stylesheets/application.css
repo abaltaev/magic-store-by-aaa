@@ -16,3 +16,38 @@ main > .container {
   padding: 60px 15px 0;
 }
 
+#login {
+  margin: 7px;
+}
+
+#signup {
+  margin: 7px;
+  margin-right: 3%;
+}
+
+#main-button {
+  margin: 7px;
+}
+
+#logout {
+  margin: 7px;
+  margin-right: 3%;
+
+}
+
+.navbar-brand {
+  margin-left: 3%;
+}
+
+.reg-bottom {
+  text-align: center;
+  margin-top: 3%;
+}
+
+/* #main-page {
+  width: auto;
+  height: auto;
+  margin: auto;
+  padding: auto;
+} */
+/* ????????? */

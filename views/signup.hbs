@@ -1,13 +1,12 @@
 <head>
-  <title>Login</title>
-  <link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Sign Up</title>
   <link href="/stylesheets/login.css" rel="stylesheet">
 </head>
 
 <body class="text-center">
 
   <main class="form-signin">
-    <form id="" action="/auth/signup" method="POST">
+    <form id="singup-form" action="/auth/signup" method="POST">
       <img class="mb-4" src="" alt="" width="72" height="57">
       <h1 class="h3 mb-3 fw-normal">Please sign up</h1>
 
@@ -22,11 +21,10 @@
 
       <label for="inputCity" class="visually-hidden">City</label>
       <input type="text" id="inputCity" class="form-control" name="city" placeholder="City" required>
-      <div class="checkbox mb-3">
-      </div>
+      <br>
       <button class="w-100 btn btn-lg btn-primary" type="submit">Sign Up</button>
     </form>
-    <p class="">If you already registered please <a href="/auth/login">Log In</a></p>
+    <p class="reg-bottom">Already registered? <a href="/auth/login">Log In</a></p>
   </main>
 
 </body>

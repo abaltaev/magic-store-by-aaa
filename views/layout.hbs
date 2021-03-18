@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Document</title>
+  <title>MAGIC STORE</title>
 
   <link href="/stylesheets/application.css" rel="stylesheet">
   <link href="/stylesheets/normalize.css" rel="stylesheet">
@@ -12,6 +12,7 @@
   <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sticky-footer-navbar/">
 
   <script defer src="/assets/dist/js/bootstrap.bundle.min.js"></script>
+  <script defer src="/js/application.js"></script>
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -19,7 +20,7 @@
   <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">MAGIC CARDSTORE</a>
+        <a class="navbar-brand" href="/">MAGIC CARDSTORE</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
           aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -27,22 +28,31 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav me-auto mb-2 mb-md-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">ABC</a>
+              <a class="nav-link active" aria-current="page" href="#">?</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">ABC</a>
+              <a class="nav-link" href="#">?</a>
             </li>
             <li class="nav-item">
               <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
             </li>
           </ul>
-          <form id="" action="/auth/login" method="GET" class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Cart</a>
+          {{#if check}}
+          <form id="main-button" action="/" method="GET" class="d-flex">
+            <button class="btn btn-outline-success" type="submit">Main</button>
+          </form>
+          <form id="logout" action="/auth/logout" method="GET" class="d-flex">
+            <button class="btn btn-outline-success" type="submit">Logout</button>
+          </form>
+          {{else}}
+          <form id="login" action="/auth/login" method="GET" class="d-flex">
             <button class="btn btn-outline-success" type="submit">Login</button>
           </form>
-          <form id="" action="/auth/signup" method="GET" class="d-flex">
-            <button class="btn btn-outline-success" type="submit">SignUp</button>
+          <form id="signup" action="/auth/signup" method="GET" class="d-flex">
+            <button class="btn btn-outline-success" type="submit">Sign Up</button>
           </form>
+          {{/if}}
         </div>
       </div>
     </nav>
@@ -54,7 +64,7 @@
 
   <footer class="footer mt-auto py-3 bg-light">
     <div class="container">
-      <span class="text-muted">&copy; AAA Team 2021</span>
+      <span><a href="#" class="text-muted">&copy; AAA Team 2021</a></span>
     </div>
   </footer>
 
