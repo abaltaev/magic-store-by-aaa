@@ -1,7 +1,9 @@
+<div style="padding-top:80px">
+
 <ul id="container">
 
   {{!-- {{#each card}} --}}
-  <li id="card">
+  <li id="card" style="display: flex; ">
     <span>
       <img src="https://media.magic.wizards.com/image_legacy_migration/images/magic/tcg/products/dgm/tiwoirwiixix/cgcqubotzx_RU.jpg" alt="cardImg">
     </span>
@@ -13,8 +15,9 @@
       <h4>{{card.condition}}3/5</h4>
       <h4>{{card.sellerID}}John</h4>
     </span>
-    <a href="/index/{{card.id}}">X</a>
+    <a href="/index/{{card.id}}" style="border:5px solid red">X</a>
   </li>
   {{!-- {{/each}} --}}
 
 </ul>
+</div>
