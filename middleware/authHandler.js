@@ -7,7 +7,7 @@ function cookieCleaner(req,res,next){
 
 function sessionChecker(req ,res, next){
   if(req.session.user){
-    alert('Вы уже залогинины')
+    // alert('Вы уже залогинины')
     res.redirect('/') //???? ручка под вопросом
   } else{
     next()

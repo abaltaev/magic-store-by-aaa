@@ -6,12 +6,11 @@ module.exports = function(app) {
   const path = require("path");
   const FileStore = require("session-file-store")(session);
   // const { cookiesCleaner } = require("./auth");
-  // const dbConnection = require("./dbconnect");
+  const dbConnection = require("./dbconnect");
   app.use(morgan("dev"));
-
+  // dbConnection()
   app.use(express.urlencoded({ extended: true }));
   app.use(express.json());
-
   app.use(cookieParser());
 
   app.use(
