@@ -4,8 +4,8 @@
   "description": "Amazon on minimal",
   "main": "./bin/server.js",
   "scripts": {
-    "start": "nodemon ./bin/server.js",
-    "dev": "node./bin/server.js --ignore sessions",
+    "start": "nodemon ./bin/server.js --ignore sessions",
+    "dev": "nodemon ./bin/server.js --ignore sessions",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
