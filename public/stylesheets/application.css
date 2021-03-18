@@ -35,6 +35,10 @@ main > .container {
 
 }
 
+#profile-button {
+  margin: 7px;
+}
+
 .navbar-brand {
   margin-left: 3%;
 }
