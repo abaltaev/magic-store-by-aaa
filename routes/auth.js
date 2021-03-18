@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcryptjs')
 const { sessionChecker } = require('../middleware/authHandler')
 const User = require('../models/user')
 
@@ -8,7 +8,7 @@ const User = require('../models/user')
 router
   .route('/login')
   .get(sessionChecker,(req,res)=>{
-    res.render('/login')
+    res.render('login')
   })
   .post(async (req,res)=>{
     const {name, password} = req.body
@@ -25,7 +25,7 @@ router
 router
   .route('/signup')
   .get(sessionChecker,(req ,res)=>{
-    res.render('/signup')
+    res.render('signup')
   })
   .post(async (req,res, next)=>{
     try{
