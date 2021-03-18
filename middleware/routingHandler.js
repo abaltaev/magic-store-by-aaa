@@ -11,7 +11,7 @@ module.exports = (app) => {
   app.use('*', checkUser) // checkUser на весь проект для navbara
   app.use(indexRouter)
   app.use('/auth', authRouter)
-  app.use('/card', cardRouter)
+  app.use('/newSaleCard', cardRouter)
   app.use('/profile', profileRouter)
   app.use('/basket', basketRouter)
 }
