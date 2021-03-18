@@ -98,13 +98,13 @@ const sellDiv = document.getElementById('sellDiv')
 
 sellForm.addEventListener('submit', async (e)=>{
   e.preventDefault();
-  console.log(e.target.select.value)
+
   const response = await fetch('/profile/forsale', {
     method: 'POST',
     headers: {'Content-Type': 'Application/json'},
     body: JSON.stringify({    
       name: e.target.name.value,
-      img: e.target.select.value,
+      img: e.target.img.value,
       price: e.target.price.value,
       city: e.target.city.value,
       condition: e.target.condition.value
