@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MAGIC STORE</title>
+  <title>HEARTHSTONE CARDSTORE</title>
 
   <link href="/stylesheets/application.css" rel="stylesheet">
   <link href="/stylesheets/normalize.css" rel="stylesheet">
@@ -20,31 +20,17 @@
   <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/">MAGIC CARDSTORE</a>
+        <a class="navbar-brand" href="/">HEARTHSTONE CARDSTORE</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
           aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav me-auto mb-2 mb-md-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">?</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">?</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
-          <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Cart</a>
+          <ul class="navbar-nav me-auto mb-2 mb-md-0"></ul>
+          <a class="nav-link" href="/basket" tabindex="-1" aria-disabled="true">Cart</a>
           {{#if check}}
-          <form id="main-button" action="/" method="GET" class="d-flex">
-            <button class="btn btn-outline-success" type="submit">Main</button>
-          </form>
-          <form id="logout" action="/auth/logout" method="GET" class="d-flex">
-            <button class="btn btn-outline-success" type="submit">Logout</button>
-          </form>
+          <a class="nav-link" href="/profile" tabindex="-1" aria-disabled="true">Profile</a>
+          <a class="nav-link" href="/auth/logout" tabindex="-1" aria-disabled="true">Logout</a>
           {{else}}
           <form id="login" action="/auth/login" method="GET" class="d-flex">
             <button class="btn btn-outline-success" type="submit">Login</button>
