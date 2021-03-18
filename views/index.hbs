@@ -1,6 +1,24 @@
-   <main class="flex-shrink-0">
-    <div class="container">
-      <h1 class="mt-5">CAROUSEL</h1>
-      <p class="lead">BLA BLA BLA</p>
-    </div>
-  </main>
+<head>
+  <link href="/stylesheets/carousel.css" rel="stylesheet">
+  <script defer src="/js/application.js"></script>
+</head>
+{{each massiv of objects }}
+<ul class="list">
+  <li class="hide">
+    AAAAAAAAAAAAA
+  </li>
+  <li class="prev">
+    <img src="{{this.img}}">
+  </li>
+  <li class="act">
+    <img src="https://static1-www.millenium.gg/articles/6/10/86/6/@/123240-kronx-dragonhoof151334-article_m-1.png">
+  </li>
+  <li class="next">
+    <img src="https://static1-www.millenium.gg/articles/6/10/86/6/@/123240-kronx-dragonhoof151334-article_m-1.png">
+  </li>
+  <li class="next new-next">
+    AAAAAAAAA
+  </li>
+</ul>
+
+<div class="swipe"></div>
