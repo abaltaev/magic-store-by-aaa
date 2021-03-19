@@ -2,6 +2,33 @@
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   {{!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"> --}}
 
+
+<ul id="container">
+  {{!-- {{#each card}} --}}
+  <li id="card" style="display: flex; ">
+    <span>
+      <img src="https://media.magic.wizards.com/image_legacy_migration/images/magic/tcg/products/dgm/tiwoirwiixix/cgcqubotzx_RU.jpg" alt="cardImg">
+    </span>
+    <span>
+      <h2>{{card.name}}name</h2>
+      <h4>{{card.price}}$111</h4>
+      <h4>{{card.rare}}Legendary</h4>
+      <h4>{{card.city}}Moscow</h4>
+      <h4>{{card.condition}}3/5</h4>
+      <h4>{{card.sellerID}}John</h4>
+    </span>
+    <button id="deleteCardBtn" value="delete" data-card="{{card._id}}" style="height:70px; width:70px; border-radius:50%; border:5px solid red">X</button>
+  </li>
+  {{!-- {{/each}} --}}
+</ul>
+<button id="buyBtn">Buy</button>
+<button id="deleteAllBtn" value="deleteAll">Delete All</button>
+</div>
+
+
+
+<script src="/js/email.js"></script>
+
   <link href="/stylesheets/basket.css" rel="stylesheet">
 
   <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -77,27 +104,4 @@
   </div>
 </div>
 
-{{!-- <div style="padding-top:80px">
 
-  <ul id="container">
-
-    {{!-- {{#each card}} --}}
-    {{!-- <li id="card" style="display: flex; ">
-      <span>
-        <img src="https://cdn.hearthstonetopdecks.com/wp-content/uploads/2015/08/alexstraszas-champion-hd.png"
-          alt="cardImg">
-      </span>
-      <span>
-        <h2>{{card.name}}name</h2>
-        <h4>{{card.price}}$111</h4>
-        <h4>{{card.rare}}Legendary</h4>
-        <h4>{{card.city}}Moscow</h4>
-        <h4>{{card.condition}}3/5</h4>
-        <h4>{{card.sellerID}}John</h4>
-      </span>
-      <a id="deleteBtn" href="/index/{{card.id}}" style="border:5px solid red">X</a>
-    </li> --}}
-    {{!-- {{/each}} --}}
-
-  {{!-- </ul>
-</div> --}} 

@@ -139,13 +139,11 @@ if (mainCards) {
   abc();
 }
 
-const sellForm = document.getElementById('sell')
-const sellDiv = document.getElementById('sellDiv')
-const deleteBtn = document.getElementById('deleteBtn')
 
-if(sellForm){
-  sellForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
+// const sellForm = document.getElementById('sell')
+// console.log(sellForm);
+// sellForm.addEventListener('submit', async (e) => {
+//   e.preventDefault();
   
     const response = await fetch('/profile/forsale', {
       method: 'POST',
@@ -211,3 +209,4 @@ if(infoBasketBtn){
     })
   })
 }
+
