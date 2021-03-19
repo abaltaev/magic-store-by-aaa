@@ -44,11 +44,15 @@ if (mainCards) {
       addedEl.src = responseJSON[Math.floor(Math.random() * responseJSON.length)].img;
       addedEl.classList.add("card-image");
 
+
       $(".list").appendChild(addedEl);
       addedEl.classList.add("next", "new-next");
     }
 
-    function prev() {                                       // PREV
+    function prev() { 
+      // const infoButton = document.createElement('button');
+      // infoButton.innerText = 'AAAA'
+                                            // PREV
       $(".new-next").remove();
 
       /* Step */
@@ -59,6 +63,7 @@ if (mainCards) {
       $(".act").classList.remove("act");
 
       $(".prev").classList.add("act");
+      // $(".list").appendChild(infoButton)
       $(".prev").classList.remove("prev");
 
       /* New Prev */
