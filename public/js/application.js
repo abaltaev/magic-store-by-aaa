@@ -115,6 +115,7 @@ const deleteBtn = document.getElementById('deleteBtn')
 
 sellForm.addEventListener('submit', async (e) => {
   e.preventDefault();
+
   const response = await fetch('/profile/forsale', {
     method: 'POST',
     headers: { 'Content-Type': 'Application/json' },
@@ -129,4 +130,4 @@ sellForm.addEventListener('submit', async (e) => {
   const resJson = await response.json();
 
 })
-// })
+

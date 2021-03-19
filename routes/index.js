@@ -1,4 +1,5 @@
 const router = require('express').Router()
+
 const Card = require('../models/card');
 
 router.get('/', (req, res) => {
@@ -8,6 +9,7 @@ router.get('/', (req, res) => {
 router.get('/getarray', async (req, res) => {
   const cardsArr = await Card.find({ status: true });
   res.json(cardsArr);
+
 })
 
 module.exports = router
