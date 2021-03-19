@@ -1,0 +1,31 @@
+/* .blog-post {
+  margin-bottom: 4rem;
+}
+
+.blog-post-title {
+  margin-bottom: .25rem;
+  font-size: 2.5rem;
+}
+
+.blog-post-meta {
+  margin-bottom: 1.25rem;
+  color: #727272;
+} */
+
+.current-card-info {
+  margin-top: 8%;
+  margin-left: 6%;
+}
+
+.current-card-img {
+
+}
+
+#atc-btn {
+  background-color:rgb(35, 206, 106);
+  border-color:  rgb(35, 206, 106);
+}
+
+#back-to-main-link {
+  margin-left: 42%;
+}

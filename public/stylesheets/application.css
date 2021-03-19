@@ -53,6 +53,10 @@ main > .container {
   width: 270px;
 }
 
+.bi-cart {
+  margin-bottom: 3px;
+}
+
 /* #main-page {
   width: auto;
   height: auto;

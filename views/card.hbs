@@ -1,8 +1,25 @@
-<br>
-<br>
-<br>
-<br>
-<h1>HELLO</h1>
-{{card}}
+<head>
+  <link href="/stylesheets/card.css" rel="stylesheet">
+</head>
+
+<div class="current-card-info col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col-auto d-none d-lg-block">
+          <img class="current-card-img" src={{card.img}} width="300" height="400">
+        </div>
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary">Card Rarity</strong>
+          <h3 class="mb-0">{{card.name}}</h3>
+          <div class="mb-1 text-muted">??</div>
+          <p class="card-text mb-auto">Card info</p>
+          <p class="card-text mb-auto">{{card.city}}</p>
+          <p class="card-text mb-auto">{{card.price}}</p>
+          <button id="atc-btn" class="btn btn-lg btn-primary"> Add to Cart</button>
+        </div>
+      </div>
+      <a id="back-to-main-link" href="/" >Back to Main</a>
+    </div>
+
+{{!-- {{card}} --}}
 
 <button id="infoBasketBtn">Add</button>

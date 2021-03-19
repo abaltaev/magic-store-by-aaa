@@ -1,5 +1,19 @@
-<div style="padding-top:150px">
-<a href="/profile/forsale">Мои продажи</a>
-<a href="/profile/purchased">Мои покупки</a>
-<a href="/card/newSaleCard">Продать карту</a>
+<head>
+  <link href="/stylesheets/profile.css" rel="stylesheet">
+</head>
+
+<h1 id="profile-header">Hello, {{user}}</h1>
+
+<div id="profile-page">
+  <div>
+    <a href="/profile/forsale">My Sales</a>
+  </div>
+  <div>
+    <a href="/profile/purchased">My Purchases</a>
+  </div>
+  <div>
+    <form action="/card/newSaleCard" method="GET">
+      <button id="atc-btn" class="btn btn-lg btn-primary">Sell Card</button>
+    </form>
+  </div>
 </div>
