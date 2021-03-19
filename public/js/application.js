@@ -93,11 +93,11 @@ swipe.on("swiperight", (ev) => {
 
 const sellForm = document.getElementById('sell')
 const sellDiv = document.getElementById('sellDiv')
+const deleteBtn = document.getElementById('deleteBtn')
 
 
 sellForm.addEventListener('submit', async (e)=>{
   e.preventDefault();
-
   const response = await fetch('/profile/forsale', {
     method: 'POST',
     headers: {'Content-Type': 'Application/json'},
@@ -109,10 +109,15 @@ sellForm.addEventListener('submit', async (e)=>{
       condition: e.target.condition.value
     })
   })
-  // console.log(response)
   const resJson = await response.json();
-  // console.log(resJson)
-  sellDiv.innerHTML= `<div> ${resJson} </div>`
-  // window.location = '/profile'
-  
+  // sellDiv.innerHTML= `<div> ${resJson} </div>`
+})
+
+
+deleteBtn.addEventListener('click', async (e) => {
+  e.preventDefault();
+
+  const response = await fetch(`/basket/${e.target.}`, {
+    method: 'DELETE',
+  })
 })
