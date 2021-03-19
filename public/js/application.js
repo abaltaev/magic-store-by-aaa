@@ -165,15 +165,15 @@ if(sellForm){
 
 }
 
+if(document.querySelector('.act')) {
+  document.body.addEventListener('click', () => {
+    console.log('click')
+    currentCard = encodeURIComponent(document.querySelector('.act').src)
+    console.log(currentCard);
+  })
+}
 
-document.body.addEventListener('click', () => {
-  console.log('click')
-  currentCard = encodeURIComponent(document.querySelector('.act').src)
-  console.log(currentCard);
 
-  
-
-})
 
 const cardInfo = document.getElementById('card-info')
 if(cardInfo){
@@ -192,4 +192,22 @@ if(cardInfo){
     window.location = `/card/${resJSON.card._id}`
   })
 
+}
+
+const infoBasketBtn = document.getElementById('infoBasketBtn')
+
+
+if(infoBasketBtn){
+  infoBasketBtn.addEventListener('click', async (e) => {
+    const cardID = window.location.pathname.slice(6);
+
+    console.log(cardID);
+
+    const response = await fetch(`/basket/${cardID}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'Application/json' },
+      body: JSON.stringify({cardID})
+
+    })
+  })
 }
