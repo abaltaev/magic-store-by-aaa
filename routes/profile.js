@@ -24,6 +24,7 @@ router.post('/forsale', async (req, res) => {
     11:'https://media.magic.wizards.com/image_legacy_migration/images/magic/tcg/products/dgm/tiwoirwiixix/hnnrutsyhl_RU.jpg',
     12:'https://media.magic.wizards.com/image_legacy_migration/images/magic/tcg/products/dgm/tiwoirwiixix/rqj2xg44it_RU.jpg',
     }
+  console.log(req.body.img);
   const card = new Card ({
     name: req.body.name,
     img: arr[req.body.img],
@@ -32,7 +33,7 @@ router.post('/forsale', async (req, res) => {
     condition: req.body.condition,
     sellerID: req.session.user._id
   })
-
+  console.log(card)
   await card.save()
   res.redirect('/')
 })
