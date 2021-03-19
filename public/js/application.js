@@ -1,4 +1,5 @@
 const mainCards = document.getElementById('main-cards')
+let currentCard = ''
 
 if (mainCards) {
   async function abc() {

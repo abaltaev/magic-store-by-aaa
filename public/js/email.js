@@ -5,7 +5,7 @@ console.log(buyBtn)
     e.preventDefault();
   
     console.log(2)
-    const response = await fetch('/profile/forsale', {
+    const response = await fetch('/basket',{
       method: 'POST',
       headers: { 'Content-Type': 'Application/json' },
     })
@@ -13,7 +13,7 @@ console.log(buyBtn)
     console.log(resJson)
   });
 
-  
+
   const deleteAll = document.getElementById('deleteAllBtn');
   console.log(deleteAll)
 

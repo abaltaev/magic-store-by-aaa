@@ -1,26 +1,45 @@
 const router = require('express').Router()
-const mandrill = require('node-mandrill')('9ec520aa0f619e0e8519752a591ebe68-us1')
+const nodemailer = require("nodemailer");
 
 
 router.get('/',(req,res)=>res.render('basket'))
 
-router.get('/profile/forsale', (req, res) => {
+router.post('/', (req, res) => {
+const usermail = req.session.mail
+  async function main() {
 
-  mandrill('/messages/send', {
-    message: {
-        to: [{email: 'boltayev_azizbek@mail.ru', name: 'Jim Rubenstein'}],
-        from_email: 'bazizbek@gmail.com',
-        subject: "Hey, what's up?",
-        text: "Hello, I sent this message using mandrill."
-    }
-  }, function(error, response)
-  {
-    //uh oh, there was an error
-    if (error) console.log( JSON.stringify(error) );
+    let transporter =  nodemailer.createTransport({
+      service: 'Mail.ru',
+      auth: {
+        user: 'mr_bono1997@mail.ru',
+        pass: 'bono1997'
+      },
+      tls: {
+        rejectUnauthorized: false
+      }
+    });
+  try{
+    // send mail with defined transport object
+    let info = await transporter.sendMail({
+      from: '"Fred Foo 👻" mr_bono1997@mail.ru', // sender address
+      to: usermail, // list of receivers
+      subject: "Hello ✔", // Subject line
+      text: "Hello world?", // plain text body
+      html: "<b>Hello world?</b>", // html body
+    });
+    console.log("Message sent: %s", info.messageId);
+    console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+  }catch(error){console.error(error)}
+  // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
+  
+    // Preview only available when sending through an Ethereal account
+    // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
+  }
+  
+  main().catch(console.error);
+  
 
-    //everything's good, lets see what mandrill said
-    else console.log(response);
-  });
+  res.json('ok')
 
 })
 
