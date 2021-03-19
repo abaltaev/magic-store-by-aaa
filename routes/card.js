@@ -9,11 +9,24 @@ router.get('/newSaleCard', (req,res) => {
 
 router.get('/', (req,res)=> res.render('card'))
 
-router.get('/:id', async (req, res) => {
+router.get('/:id', async (req,res) => {
   const {id} = req.params
   const card = await Card.findOne({_id:id})
-  console.log(card, 'card');
-  res.render ('card', {card})
+  console.log(card);
+  res.render('card', {card})
 })
+
+router.post('/:id', async (req, res) => {
+  const {id} = req.params
+  console.log(id);
+  // const decodeCard = decodeURIComponent(id.currentCard)
+  // console.log(id);
+  const card = await Card.findOne({img:id})
+  console.log(card);
+  // res.redirect('/card', {card})
+  // res.render ('card', {card})
+  res.json({card})
+})
+
 
 module.exports = router
