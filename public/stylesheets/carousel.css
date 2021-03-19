@@ -9,24 +9,24 @@ body {
 }
 
 .list {
-  height: 200px;
+  height: 300px;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 44%;
+  left: 48%;
   transform: translate(-50%,-50%)
 }
 
-.list li {
-  list-style-type: none;
+.list img {
+  /* list-style-type: none; */
   
-  width: 200px;
-  height: 200px;
+  /* width: 200px;
+  height: 200px; */
   opacity: .25;
   position: absolute;
   left: 50%;
   margin-left: -100px;
-  border-radius: 2px;
-  background: #9C89B8;
+  /* border-radius: 2px;
+  background: #9C89B8; */
   transition: transform 1s, opacity 1s;
 }
 
