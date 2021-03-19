@@ -1,6 +1,6 @@
-const navbar = document.getElementById('navbarCollapse')
+const mainCards = document.getElementById('main-cards')
 
-if (navbar) {
+if (mainCards) {
   async function abc() {
     const response = await fetch('/getarray', {
       method: 'GET',
@@ -44,11 +44,15 @@ if (navbar) {
       addedEl.src = responseJSON[Math.floor(Math.random() * responseJSON.length)].img;
       addedEl.classList.add("card-image");
 
+
       $(".list").appendChild(addedEl);
       addedEl.classList.add("next", "new-next");
     }
 
-    function prev() {                                       // PREV
+    function prev() { 
+      // const infoButton = document.createElement('button');
+      // infoButton.innerText = 'AAAA'
+                                            // PREV
       $(".new-next").remove();
 
       /* Step */
@@ -59,6 +63,7 @@ if (navbar) {
       $(".act").classList.remove("act");
 
       $(".prev").classList.add("act");
+      // $(".list").appendChild(infoButton)
       $(".prev").classList.remove("prev");
 
       /* New Prev */
@@ -109,41 +114,43 @@ if (navbar) {
 }
 
 
-const sellForm = document.getElementById('sell')
-
-sellForm.addEventListener('submit', async (e) => {
-  e.preventDefault();
+// const sellForm = document.getElementById('sell')
+// console.log(sellForm);
+// sellForm.addEventListener('submit', async (e) => {
+//   e.preventDefault();
   
-  const response = await fetch('/profile/forsale', {
-    method: 'POST',
-    headers: { 'Content-Type': 'Application/json' },
-    body: JSON.stringify({
-      name: e.target.name.value,
-      img: e.target.img.value,
-      price: e.target.price.value,
-      city: e.target.city.value,
-      condition: e.target.condition.value
-    })
-  })
-  const resJson = await response.json();
-})
+//   const response = await fetch('/profile/forsale', {
+//     method: 'POST',
+//     headers: { 'Content-Type': 'Application/json' },
+//     body: JSON.stringify({
+//       name: e.target.name.value,
+//       img: e.target.img.value,
+//       price: e.target.price.value,
+//       city: e.target.city.value,
+//       condition: e.target.condition.value
+//     })
+//   })
+//   const resJson = await response.json();
+//   console.log(resJson);
+//   location.assign('/')
+// })
 
 
-const buyBtn = document.getElementById('buyBtn')
-console.log(buyBtn)
-buyBtn.addEventListener('click', async (e) => {
-  e.preventDefault();
-  console.log(2)
-  const response = await fetch('/profile/forsale', {
-    method: 'POST',
-    headers: { 'Content-Type': 'Application/json' },
-    body: JSON.stringify({
-      name: e.target.name.value,
-      img: e.target.img.value,
-      price: e.target.price.value,
-      city: e.target.city.value,
-      condition: e.target.condition.value
-    })
-  })
-  const resJson = await response.json();
-})
+// const buyBtn = document.getElementById('buyBtn')
+// console.log(buyBtn)
+// buyBtn.addEventListener('click', async (e) => {
+//   e.preventDefault();
+//   console.log(2)
+//   const response = await fetch('/profile/forsale', {
+//     method: 'POST',
+//     headers: { 'Content-Type': 'Application/json' },
+//     body: JSON.stringify({
+//       name: e.target.name.value,
+//       img: e.target.img.value,
+//       price: e.target.price.value,
+//       city: e.target.city.value,
+//       condition: e.target.condition.value
+//     })
+//   })
+//   const resJson = await response.json();
+// })

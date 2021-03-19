@@ -11,7 +11,7 @@ body {
 .list {
   height: 300px;
   position: absolute;
-  top: 44%;
+  top: 39%;
   left: 48%;
   transform: translate(-50%,-50%)
 }
@@ -71,4 +71,19 @@ body {
   left: 50%;
   transform: translate(-50%,-50%);
   opacity: 0;
+}
+
+#card-info {
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  margin-top: 36%;
+  padding-top: 10px;
+  padding-left: 27px;
+  
+}
+
+#card-info-btn {
+  background-color:blueviolet;
+  border-color:  blueviolet;
 }
