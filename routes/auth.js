@@ -18,8 +18,8 @@ router
       req.session.user = user
       res.redirect('/')
     }else{
-      // alert('Не верный login и/или password')
-      res.redirect('/login')
+    
+    res.redirect('/auth/login')
     }
   })
 
