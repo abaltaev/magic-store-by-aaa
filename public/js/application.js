@@ -165,6 +165,7 @@ if(sellForm){
 
 }
 
+
 document.body.addEventListener('click', () => {
   console.log('click')
   currentCard = encodeURIComponent(document.querySelector('.act').src)
