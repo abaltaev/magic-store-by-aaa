@@ -20,7 +20,6 @@ router.post('/:id', async (req, res) => {
   const {id} = req.params
   console.log(id);
   // const decodeCard = decodeURIComponent(id.currentCard)
-  // console.log(id);
   const card = await Card.findOne({img:id})
   console.log(card);
   // res.redirect('/card', {card})

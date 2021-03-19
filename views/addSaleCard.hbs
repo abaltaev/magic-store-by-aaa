@@ -1,26 +1,40 @@
+<head>
+
+  <link href="/stylesheets/addSaleCard.css" rel="stylesheet">
+</head>
+
+
 <h1>Creating a card for sale</h1>
 
 <form id="sell" action="/profile/forsale" method="post" style="padding-top: 50px;">
-  <img src="{{card}}" alt="">
-  <input type="text" name="name" placeholder="name">
+  {{!-- <img src="{{card}}" alt=""> --}}
+  {{!-- <input type="text" name="name" placeholder="name"> --}}
+
   <select name="img" id="select">
-    <option disabled>Choose the </option>
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-    <option value="5">5</option>
-    <option value="6">6</option>
-    <option value="7">7</option>
-    <option value="8">8</option>
-    <option value="9">9</option>
-    <option value="10">10</option>
-    <option value="11">11</option>
-    <option value="12">12</option>
+    <option "disabled">Choose card </option>
+    <option value="1">Acolyte of Pain</option>
+    <option value="2">Antique Healbot</option>
+    <option value="3" >Abyssal Enforcer</option>
+    <option class="blue" value="4">Alexstrasza's Champion</option>
+    <option class="blue" value="5">Azure Drake</option>
+    <option class="blue" value="6" >Anyfin Can Happen</option>
+    <option class="purple" value="7" >Doomhammer</option>
+    <option class="purple" value="8" >Ancient of War</option>
+    <option class="purple" value="9" >Arcane Giant</option>
+    <option class="orange" value="10" >Patches the Pirate</option>
+    <option class="orange" value="11" >Alexstrasza</option>
+    <option class="orange" value="12" >Deathwing</option>
+  </select>
+  <select name="condition" id="select">
+    <option "disabled">Condition</option>
+    <option value="">trash</option>
+    <option value="">bull shit</option>
+    <option value="">hmmmm.... not bad</option>
+    <option value="">oh, nice</option>
+    <option value="">OMG - it's awesome</option>
   </select>
   <input type="text" name="price" placeholder="price">
   <input type="text" name="city" placeholder="city">
-  <input type="text" name="condition" placeholder="condition">
   <button type="submit">Sell</button>
 </form>
 
