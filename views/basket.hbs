@@ -1,7 +1,6 @@
 <div style="padding-top:80px">
 
 <ul id="container">
-
   {{!-- {{#each card}} --}}
   <li id="card" style="display: flex; ">
     <span>
@@ -15,9 +14,10 @@
       <h4>{{card.condition}}3/5</h4>
       <h4>{{card.sellerID}}John</h4>
     </span>
-    <a id="deleteBtn" href="/index/{{card.id}}" style="border:5px solid red">X</a>
+    <button id="deleteCardBtn" value="delete" data-card="{{card._id}}" style="height:70px; width:70px; border-radius:50%; border:5px solid red">X</button>
   </li>
   {{!-- {{/each}} --}}
-
 </ul>
+<button id="buyBtn">Buy</button>
+<button id="deleteAllBtn" value="deleteAll">Delete All</button>
 </div>
