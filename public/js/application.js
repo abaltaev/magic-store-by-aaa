@@ -1,4 +1,5 @@
 const mainCards = document.getElementById('main-cards')
+let currentCard = ''
 
 if (mainCards) {
   async function abc() {
@@ -117,23 +118,52 @@ const sellForm = document.getElementById('sell')
 const sellDiv = document.getElementById('sellDiv')
 const deleteBtn = document.getElementById('deleteBtn')
 
-
-sellForm.addEventListener('submit', async (e) => {
-  e.preventDefault();
-
-  const response = await fetch('/profile/forsale', {
-    method: 'POST',
-    headers: { 'Content-Type': 'Application/json' },
-    body: JSON.stringify({
-      name: e.target.name.value,
-      img: e.target.img.value,
-      price: e.target.price.value,
-      city: e.target.city.value,
-      condition: e.target.condition.value
+if(sellForm){
+  sellForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+  
+    const response = await fetch('/profile/forsale', {
+      method: 'POST',
+      headers: { 'Content-Type': 'Application/json' },
+      body: JSON.stringify({
+        name: e.target.name.value,
+        img: e.target.img.value,
+        price: e.target.price.value,
+        city: e.target.city.value,
+        condition: e.target.condition.value
+      })
     })
+    const resJson = await response.json();
+    console.log(resJson);
+    location.assign('/')
   })
-  const resJson = await response.json();
-  console.log(resJson);
-  location.assign('/')
+
+}
+
+document.body.addEventListener('click', () => {
+  console.log('click')
+  currentCard = encodeURIComponent(document.querySelector('.act').src)
+  console.log(currentCard);
+
+  
+
 })
 
+const cardInfo = document.getElementById('card-info')
+if(cardInfo){
+  cardInfo.addEventListener('submit', async (e) => {
+    e.preventDefault()
+  
+    const response = await fetch(`/card/${currentCard}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'Application/json' },
+      body: JSON.stringify({currentCard})
+    })
+  
+    const resJSON = await response.json()
+    console.log(resJSON.card._id)
+  
+    window.location = `/card/${resJSON.card._id}`
+  })
+
+}
