@@ -1,6 +1,6 @@
-const navbar = document.getElementById('navbarCollapse')
+const mainCards = document.getElementById('main-cards')
 
-if (navbar) {
+if (mainCards) {
   async function abc() {
     const response = await fetch('/getarray', {
       method: 'GET',
@@ -133,6 +133,7 @@ sellForm.addEventListener('submit', async (e) => {
     })
   })
   const resJson = await response.json();
-
+  console.log(resJson);
+  location.assign('/')
 })
 
