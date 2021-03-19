@@ -1,23 +1,103 @@
-<div style="padding-top:80px">
+<head>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  {{!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"> --}}
 
-<ul id="container">
+  <link href="/stylesheets/basket.css" rel="stylesheet">
 
-  {{!-- {{#each card}} --}}
-  <li id="card" style="display: flex; ">
-    <span>
-      <img src="https://media.magic.wizards.com/image_legacy_migration/images/magic/tcg/products/dgm/tiwoirwiixix/cgcqubotzx_RU.jpg" alt="cardImg">
-    </span>
-    <span>
-      <h2>{{card.name}}name</h2>
-      <h4>{{card.price}}$111</h4>
-      <h4>{{card.rare}}Legendary</h4>
-      <h4>{{card.city}}Moscow</h4>
-      <h4>{{card.condition}}3/5</h4>
-      <h4>{{card.sellerID}}John</h4>
-    </span>
-    <a id="deleteBtn" href="/index/{{card.id}}" style="border:5px solid red">X</a>
-  </li>
-  {{!-- {{/each}} --}}
+  <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  {{!-- <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> --}}
+</head>
 
-</ul>
+<div id="main-basket" class="container mb-4">
+  <div class="row">
+    <div class="col-12">
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Card Name</th>
+              <th scope="col"></th>
+              <th scope="col" class="text-center"></th>
+              <th scope="col" class="text-right">Price</th>
+              <th> </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img class="item-image" src="https://cdn.hearthstonetopdecks.com/wp-content/uploads/2015/08/alexstraszas-champion-hd.png" /> </td>
+              <td>Card Name</td>
+              <td></td>
+              <td></td>
+              <td class="text-right">123$</td>
+              <td class="text-right"><button class="btn btn-sm btn-danger">X</button> </td>
+            </tr>
+            <tr>
+              <td><img class="item-image" src="https://cdn.hearthstonetopdecks.com/wp-content/uploads/2015/08/alexstraszas-champion-hd.png" /> </td>
+              <td>Card Name</td>
+              <td></td>
+              <td></td>
+              <td class="text-right">123$</td>
+              <td class="text-right"><button class="btn btn-sm btn-danger">X</button> </td>
+            </tr>
+            {{!-- <tr>
+              <td><img class="item-image" src="https://cdn.hearthstonetopdecks.com/wp-content/uploads/2015/08/alexstraszas-champion-hd.png" /> </td>
+              <td>Card Name</td>
+              <td></td>
+              <td></td>
+              <td class="text-right">123$</td>
+              <td class="text-right"><button class="btn btn-sm btn-danger">X</button> </td>
+            </tr> --}}
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><strong>Total</strong></td>
+              <td class="text-right"><strong>123123$</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="col mb-2">
+      <div class="row">
+        <div class="col-sm-12  col-md-6">
+          <form action="/">
+          <button class="btn btn-block btn-light">Back to Main</button>
+          </form>
+        </div>
+        <div class="col-sm-12 col-md-6 text-right">
+          <form action="">
+            <button class="btn btn-lg btn-block btn-success text-uppercase">Place Order</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+{{!-- <div style="padding-top:80px">
+
+  <ul id="container">
+
+    {{!-- {{#each card}} --}}
+    {{!-- <li id="card" style="display: flex; ">
+      <span>
+        <img src="https://cdn.hearthstonetopdecks.com/wp-content/uploads/2015/08/alexstraszas-champion-hd.png"
+          alt="cardImg">
+      </span>
+      <span>
+        <h2>{{card.name}}name</h2>
+        <h4>{{card.price}}$111</h4>
+        <h4>{{card.rare}}Legendary</h4>
+        <h4>{{card.city}}Moscow</h4>
+        <h4>{{card.condition}}3/5</h4>
+        <h4>{{card.sellerID}}John</h4>
+      </span>
+      <a id="deleteBtn" href="/index/{{card.id}}" style="border:5px solid red">X</a>
+    </li> --}}
+    {{!-- {{/each}} --}}
+
+  {{!-- </ul>
+</div> --}} 
