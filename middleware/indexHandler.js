@@ -8,7 +8,6 @@ module.exports = function(app) {
   // const { cookiesCleaner } = require("./auth");
   const dbConnection = require("./dbconnect");
   app.use(morgan("dev"));
-  // dbConnection()
   app.use(express.urlencoded({ extended: true }));
   app.use(express.json());
   app.use(cookieParser());

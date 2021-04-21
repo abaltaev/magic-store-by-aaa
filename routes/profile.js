@@ -34,7 +34,6 @@ router.post('/forsale', async (req, res) => {
     sellerID: req.session.user._id
   })
   await card.save()
-  console.log(card)
   res.json('OK')
 })
 module.exports = router
